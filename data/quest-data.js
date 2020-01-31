@@ -10,7 +10,7 @@ const NYC = {
   action;
   description: `
       All the way from Lowell, you made it to NYC!
-      You're a student and a standout on the gridiron in Columbia, not bad for kid from Mill-City.
+      You're a student and a standout on the gridiron at Columbia, not bad for kid from Mill-City.
 
       But tonight you stumbled into a haunt on 9th and 3rd and met a cool, cool cat named Ginsberg, he was reading this poem he was writing, Howl.
 
