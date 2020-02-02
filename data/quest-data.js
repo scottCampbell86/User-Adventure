@@ -1,151 +1,167 @@
+const nyc = {
+    id: 'nyc',
+    title: 'Big Apple',
+    map: {
+        top: '30%',
+        left: '90%',
+    },
+  //image
+    description: `
+      All the way from Lowell, you made it to NYC!
+      You're a student and a standout on the gridiron at Columbia, not bad for kid from Mill-City.
+
+      But tonight you stumbled into a haunt on 9th and 3rd and met a cool, cool cat named Ginsberg, he was reading this poem he was writing, Howl.
+
+      So what do you think? Call it a night, get some rest for the big game tomorrow, or see what Ginsberg and his crew of pals have planned for the evening?`,
+
+    choices: [{
+        id: 'rest',
+        description: 'Call it a night',
+        result: 
+      'You did great in the game, but you never got around to writing that book about that trip you never took... And now you live in Queens with a wife and kids. Every winter you plan on dusting off that typewriter, but, you know how it goes...',
+        madness: 0,
+      // this ends the game
+          
+    }, {
+        id: 'howl',
+        description: 'Out all night',
+        result: 
+          "You went out all night, hopped from place to place, alley to alley, and ended up at some apartment, somewhere in Manhattan, and your new poet friend introduces you to a guy named Neal Cassady. And right as the sun was rising over the East River, Neal said, 'man, forget the game, the road is out there, let's go!",
+        madness: 100,
+
+    }]
+};
+
+
+                              /// CHICAGO 
+
+
+const chicago = {
+    id: 'chicago',
+    title: 'The Windy City',
+  //image;
+    map: {
+        top: '20%',
+        left: '50%',
+    },
   
-// quests[0].choices[0].description; ==> 'negotiate with them'
-
-
-const monsters = {
-    id: 'monsters',
-    title: 'A Den of Monsters',
-    map: {
-        top: '89%',
-        left: '44%'
-    },
-    image: 'monsters.jpg',
-    audio: 'monsters.wav',
-    action: 'monster-scream.wav',
-    description: `
-        You enter the quest chamber only to be confronted by a hoard of
-        monsters. And they look hungry. What do you do?
-    `,
+    description: 
+    `You made it the windy city! Neal drove so you're good and rested. It's early, so what do you feel like doing?`,
     choices: [{
-        id: 'negotiate',
-        description: 'Negotiate with them',
-        result: `
-            Knowing the monsters are not too bright, you offer to go buy them all
-            turkey dinners from the village pub. They give you 35 gold for meals
-            that will never be delivered. I hope you can live with yourself. 
-        `,
-        hp: 0,
-        gold: 35
+        id: 'loop',
+        description: 'Stroll the Loop by yourself',
+        result: 
+          `"You spend the day crazed, strolling about the loop, digging the screeching trolleys, newsboys, gals cutting by, the smell of fried food and beer in the air, neons winking," and now you regret only passing through town the last time you were in this town.`,
+        madness: 100,
+      //
+      // you spend $10
+      // 
+      //
     }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
-        result: `
-            Brandishing your sword you let out a warrior's cry and charge into the monsters
-            hacking and slashing. Before long you stand panting gazing across the bodies of
-            your vanquished foes. The bad news is you take 30 hp damage. The good news is you
-            find 50 gold.
-        `,
-        hp: -30,
-        gold: 50
+        id: 'neal',
+        description: 'Ask Neal to hit the Loop with you',
+        result: 
+          'All Neal could talk about while you were cruising the Loop was how good all the food smelled and how hungry he was from all the driving and how he was going to eat as many hot dogs and pieces of fried dough as he could. And he did. He spent $35 on the grub and some drinks and passed out before dark. Watch your budget, you need that gas money! And don not be too bummed about the wasted night, there is much road ahead... ',
+        madness: -30,
+
+    }]
+};
+                              /// NEW ORLEANS
+
+
+const newOrleans = {
+    id: 'new-orleans',
+    title: 'The Big Easy',
+    map: {
+        top: '80%',
+        left: '50%'
+    },
+  //image;
+    description: 
+      `Those were some strange days spent on the farm at Old Bull Lee's on the way to The Big Easy. A wild and reckless cat himself, but a wise one no less, and he had some worrisome thoughts about Neal, he even said you should ditch Neal and stay there with him and his wife in Louisianna. But you brush it off, shake off some of those aches and flu feelings, and set out for New Orleans. What do you do to get back up and jumping! `,
+
+    choices: [{
+        id: 'farm',
+        description: `You need to think it through. Go back to Old Bull Lee's for more wisdom.`,
+        result: 
+          `You didn't find any wisdom down there at Old Bull Lee's. No inspiration. Or much of anything that's any good. You write back and forth with Allen for sometime, but he is still waiting to hear back from you regarding the last letter he sent, that was a year ago... `,
+        madness: 0,
+      // this ends the game
+    
     }, {
-        id: 'run',
-        description: 'Run away like good Sir Robin',
-        result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 50 hp damage.
-        `,
-        hp: -50,
-        gold: 0
+        id: 'music',
+        description: 'Stick with Neal, see if Old Bull Lee is wrong.',
+        result: 
+          `You made the right choice, you spent the night digging the music, all the jazz, "live in the muds of New Orleans." You ran into a friend of Dizzy's who gave you a place to crash and you were up all night and even stayed for another. Even got yourself a free tank of gas on the way out of town, thinking about the way your writing should sound.`,
+        madness: 100,
     }]
 };
 
-const dragon = {
-    id: 'dragon',
-    title: 'A Broblem Dragon',
+                                /// DENVER
+
+
+const denver = {
+    id: 'denver',
+    title: 'Denver',
     map: {
-        top: '57%',
-        left: '20%'
+        top: '35%',
+        left: '30%'
     },
-    image: 'dragon.jpg',
-    audio: 'dragon.wav',
-    action: 'dragon-growl.aiff',
-    description: `
-        You travel to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
-    `,
+  //image;
+    description: 
+      `Denver. "And there in the blue air you see for the first time, far off, the great snowy tops of the Rocky Mountains. You knew you had to get to Denver at once!" You know about the music, you know about the bars, you know about it all. But you also know that Neal has some business to attend to. His long lost father might be living there. He might need some help trying to find him.`,
     choices: [{
-        id: 'run',
-        description: 'Get the hell out of the village',
-        result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
-        `,
-        hp: -35,
-        gold: 35
+        id: 'friend',
+        description: `You stick with Neal and help however you can, even though the city Calls`,
+        result: 
+          `Turns out, Neal was short on patience and it was only a few calls in the phone book and you were off. What a night! You "stumbled along with the most wicked grin of joy in the world, among the bums and beat cowboys of Larimer Street."`,
+        madness: 100,
     }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
-        result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 hp damage.
-        `,
-        hp: -45,
-        gold: 0
-    }, {
-        id: 'archer',
-        description: 'Emulate that guy from LOR who shot an arrow',
-        result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 gold.
-        `,
-        hp: 0,
-        gold: 90
+        id: 'ditch',
+        description: `Can't resist, just have to hit Larimer, sorry, Neal, we'll catch up later.`,
+        result: 
+          `Neal understood. He didn't have luck but he ran into somefriend's from back home. You had a good time for yourself too, but you also spend your last dime. And so did Neal. And then you got a flat before you breached city limits. Time to hitch back. Not ideal, but it could be worse, after all, "there is nothing behind you, and everything ahead of you, as is ever so on the road."`,
+        madness: -30
     }]
 };
 
-const treasure = {
-    id: 'treasure',
-    title: 'The Golden Treasure',
+                              /// SF
+
+const sanFrancisco = {
+    id: 'san-francisco',
+    title: 'Frisco',
     map: {
-        top: '31%',
-        left: '5%'
+        top: '45%',
+        left: '1%',
     },
-    image: 'treasure-chests.png',
-    audio: 'treasure-chests.wav',
-    action: 'chest-opening.wav',
-    description: `
-        As you enter the quest chamber you notice three chests before you.
-        Just as you start to imagine the wealth, you see a giant serpent
-        emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
-    `,
+  //image;
+    description: `How'd you do it? All the way to 'Frisco? That's a lot of traveling. That's a lot of road. A lot to tell. But it isn't over, or is it? `,
+
     choices: [{
-        id: 'wooden',
-        description: 'A Wooden Chest',
-        result: 'You grab 40 gold pieces!',
-        hp: 0,
-        gold: 40
+        id: 'home',
+        description: `So you're heading back—surely you'll find something fun to do...`,
+        result: `Maybe you can even make a stop on the way.`,
+        madness: -10,
+
     }, {
-        id: 'golden',
-        description: 'A Golden Chest',
-        result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
-        hp: -50,
-        gold: 0
-    }, {
-        id: 'jeweled',
-        description: 'A Jeweled Chest',
-        result: 'A warm light engulfs you and you gain 35 hp',
-        hp: 35,
-        gold: 0
+        id: 'mexico-ciy',
+        description: `Neal won't stop talking about Mexico City. Want to tag along?`,
+        result: 
+          `Should've gone elsewhere, that's for sure. You could dig the mamba, but the rest of that trip...what a trip. Neal was so crazed he ditched you somewhere south of the boder sick with dysentry! Good luck getting back East!`,
+        madness: 0,
+
+      // this ends the game
+
+
     }]
 };
-
-const quests = [
-    monsters, 
-    treasure, 
-    dragon,
+const cities = [
+    nyc,
+    chicago,
+    newOrleans,
+    denver,
+    sanFrancisco,
 ];
 
-export default quests;
+export default cities;
+
