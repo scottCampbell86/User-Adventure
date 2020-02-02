@@ -47,25 +47,25 @@ for (let index = 0; index < quest.choices.length; index++) {
 choiceForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // get user choice
+    
     const formData = new FormData(choiceForm);
     const choiceId = formData.get('choice');
-    // use old faitful to find the choice
+    
     const choice = findById(quest.choices, choiceId);
 
-    // get user out of local storage
+    
     const user = getUser();
-    // generate a score and manipulate user state
+    
     scoreQuest(choice, quest.id, user);
-    // save user
+    
     saveUser(user);
 
-    // update UI
+    
     audio.src = '../assets/quests/' + quest.action;
     choiceForm.classList.add('hidden');
     result.classList.remove('hidden');
     resultDescription.textContent = choice.result;
-    // reload profile for new stats
-    loadProfile(); // goes into state changes header
+    
+    loadProfile(); 
 
 });

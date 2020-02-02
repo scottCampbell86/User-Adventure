@@ -17,11 +17,13 @@ main {
 }
 
 #result {
-  background: #e38548;
+  background: coral;
   padding: 20px;
 }
 
 #result-description {
-  background: #e38548;
+  background: coral;
   font-weight: bolder;
+  color: whitesmoke;
+  font-size: 18px;
 }

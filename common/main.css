@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Heebo', "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
-    background: wheat;
+    background: bisque;
     margin: 0;
 }
 
@@ -27,7 +27,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background: white;
-    border-bottom: 1px solid orange;
+    border-bottom: 1px solid tomato;
 }
 
 h1 {
@@ -60,3 +60,4 @@ button {
     font-size: 1.2em;
     font-weight: bolder;
 }
+
