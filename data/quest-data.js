@@ -1,6 +1,6 @@
 const nyc = {
     id: 'nyc',
-    title: 'Big Apple',
+    title: 'New York City',
     map: {
         top: '30%',
         left: '90%',
@@ -10,24 +10,24 @@ const nyc = {
       All the way from Lowell, you made it to NYC!
       You're a student and a standout on the gridiron at Columbia, not bad for kid from Mill-City.
 
-      But tonight you stumbled into a haunt on 9th and 3rd and met a cool, cool cat named Ginsberg, he was reading this poem he was writing, Howl.
+      But tonight you stumbled into a haunt on 9th and 3rd and made friends with a poet, Allen Ginsberg.
 
-      So what do you think? Call it a night, get some rest for the big game tomorrow, or see what Ginsberg and his crew of pals have planned for the evening?`,
+      So what do you think? Call it a night and get some rest for the big game tomorrow, or see what Ginsberg and his crew have planned for the evening?`,
 
     choices: [{
         id: 'rest',
         description: 'Call it a night',
         result: 
       'You did great in the game, but you never got around to writing that book about that trip you never took... And now you live in Queens with a wife and kids. Every winter you plan on dusting off that typewriter, but, you know how it goes...',
-        madness: 0,
+        madness: -100,
       // this ends the game
           
     }, {
         id: 'howl',
-        description: 'Out all night',
+        description: `I've got another hour, or two, left in me`,
         result: 
           "You went out all night, hopped from place to place, alley to alley, and ended up at some apartment, somewhere in Manhattan, and your new poet friend introduces you to a guy named Neal Cassady. And right as the sun was rising over the East River, Neal said, 'man, forget the game, the road is out there, let's go!",
-        madness: 100,
+        madness: 0,
 
     }]
 };
@@ -41,7 +41,7 @@ const chicago = {
     title: 'The Windy City',
   //image;
     map: {
-        top: '20%',
+        top: '30%',
         left: '50%',
     },
   
@@ -52,7 +52,7 @@ const chicago = {
         description: 'Stroll the Loop by yourself',
         result: 
           `"You spend the day crazed, strolling about the loop, digging the screeching trolleys, newsboys, gals cutting by, the smell of fried food and beer in the air, neons winking," and now you regret only passing through town the last time you were in this town.`,
-        madness: 100,
+        madness: 0,
       //
       // you spend $10
       // 
@@ -73,8 +73,8 @@ const newOrleans = {
     id: 'new-orleans',
     title: 'The Big Easy',
     map: {
-        top: '80%',
-        left: '50%'
+        top: '70%',
+        left: '53%'
     },
   //image;
     description: 
@@ -85,7 +85,7 @@ const newOrleans = {
         description: `You need to think it through. Go back to Old Bull Lee's for more wisdom.`,
         result: 
           `You didn't find any wisdom down there at Old Bull Lee's. No inspiration. Or much of anything that's any good. You write back and forth with Allen for sometime, but he is still waiting to hear back from you regarding the last letter he sent, that was a year ago... `,
-        madness: 0,
+        madness: -100,
       // this ends the game
     
     }, {
@@ -93,7 +93,7 @@ const newOrleans = {
         description: 'Stick with Neal, see if Old Bull Lee is wrong.',
         result: 
           `You made the right choice, you spent the night digging the music, all the jazz, "live in the muds of New Orleans." You ran into a friend of Dizzy's who gave you a place to crash and you were up all night and even stayed for another. Even got yourself a free tank of gas on the way out of town, thinking about the way your writing should sound.`,
-        madness: 100,
+        madness: 0,
     }]
 };
 
@@ -104,7 +104,7 @@ const denver = {
     id: 'denver',
     title: 'Denver',
     map: {
-        top: '35%',
+        top: '37%',
         left: '30%'
     },
   //image;
@@ -115,13 +115,13 @@ const denver = {
         description: `You stick with Neal and help however you can, even though the city Calls`,
         result: 
           `Turns out, Neal was short on patience and it was only a few calls in the phone book and you were off. What a night! You "stumbled along with the most wicked grin of joy in the world, among the bums and beat cowboys of Larimer Street."`,
-        madness: 100,
+        madness: 0,
     }, {
         id: 'ditch',
         description: `Can't resist, just have to hit Larimer, sorry, Neal, we'll catch up later.`,
         result: 
           `Neal understood. He didn't have luck but he ran into somefriend's from back home. You had a good time for yourself too, but you also spend your last dime. And so did Neal. And then you got a flat before you breached city limits. Time to hitch back. Not ideal, but it could be worse, after all, "there is nothing behind you, and everything ahead of you, as is ever so on the road."`,
-        madness: -30
+        madness: -40
     }]
 };
 
@@ -131,16 +131,16 @@ const sanFrancisco = {
     id: 'san-francisco',
     title: 'Frisco',
     map: {
-        top: '45%',
-        left: '1%',
+        top: '40%',
+        left: '2%',
     },
   //image;
     description: `How'd you do it? All the way to 'Frisco? That's a lot of traveling. That's a lot of road. A lot to tell. But it isn't over, or is it? `,
 
     choices: [{
         id: 'home',
-        description: `So you're heading back—surely you'll find something fun to do...`,
-        result: `Maybe you can even make a stop on the way.`,
+        description: `Hit 66 heading east?`,
+        result: `So you're heading back, surely you'll find something fun to do...maybe you can even make a stop on the way.`,
         madness: -10,
 
     }, {
@@ -148,7 +148,7 @@ const sanFrancisco = {
         description: `Neal won't stop talking about Mexico City. Want to tag along?`,
         result: 
           `Should've gone elsewhere, that's for sure. You could dig the mamba, but the rest of that trip...what a trip. Neal was so crazed he ditched you somewhere south of the boder sick with dysentry! Good luck getting back East!`,
-        madness: 0,
+        madness: -100,
 
       // this ends the game
 

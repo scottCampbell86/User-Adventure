@@ -1,5 +1,5 @@
 
-/*function scoreGold(gold) {
+function scoreGold(gold) {
   if (gold === 0) {
       return 'poor';   
   }
@@ -9,4 +9,4 @@
   return 'rich';
 }
 
-export default scoreGold;*/
+export default scoreGold;

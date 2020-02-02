@@ -1,9 +1,9 @@
   
 import loadProfile from '../common/load-profile.js';
 import { getUser } from '../data/api.js';
-import scoreHp from './score-hp.js';
+import scoreMadness from './score-madness.js';
 import scoreGold from './score-gold.js';
-import { hpMessages, aliveGoldMessages, deadGoldMessages } from './messages.js';
+import { madnessMessages, aliveGoldMessages, deadGoldMessages } from './messages.js';
 
 loadProfile();
 
@@ -13,10 +13,10 @@ const storyDisplay = document.getElementById('story-display');
 
 const madnessResult = scoreMadness(user.madness); // frail, dead, or healthy
 const goldResult = scoreGold(user.gold);
-const hpMessage = hpMessages[hpResult];
+const madnessMessage = madnessMessages[madnessResult];
 
 let goldMessages = null;
-if (hpResult === 'dead') {
+if (madnessResult === 'dead') {
     goldMessages = deadGoldMessages;
 }
 else {
@@ -25,8 +25,8 @@ else {
 
 const goldMessage = goldMessages[goldResult];
 
-let story = 'After your adventures, ';
-story += user.name + ' the ' + user.race + ', ';
-story += hpMessage + ' and ' + goldMessage + '.';
+let story = 'And so, ';
+story += user.name + ', ';
+story += madnessMessage + ',' + goldMessage + '.';
 
 storyDisplay.textContent = story;

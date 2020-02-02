@@ -1,18 +1,17 @@
 
 export const aliveGoldMessages = {
-  poor: 'you live as a poor beggar',
-  modest: 'you live in a modest hut farming the earth',
-  rich: 'you and your whole family live in small castle in luxury',
+
+  modest: ' and hell--you might even have enough dough to replaces that ribbon on your typewritter when you get home',
+ 
 };
 
 export const deadGoldMessages = {
-  poor: 'you leave nothing for your family',
-  modest: 'you leave enough to buy your family a turkey dinner at the pub',
-  rich: 'your family builds a monument in your honor'
+  modest: ` "all you ever had to offer was your own confusion" anyway.`
+
 };
 
-export const hpMessages = {
-  dead: 'you are dead',
-  frail: 'you retire in frail health',
-  healthy: 'you retire and live a long life in good health',
+export const madnessMessages = {
+  dead: 'end of the road',
+  alive: 'though this trip ends, there is still plenty of road left... See you out there, friend'
+
 };
