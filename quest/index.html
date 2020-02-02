@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Results</title>
+    <title>[code] On the Road</title>
     <link rel="stylesheet" href="../common/main.css">
     <link rel="stylesheet" href="quest.css">
 </head>
 <body>
     <header>
-      <h2>
-        Inspired by run on sentences & <br>
-        Insisted upon by Alchemy Code <span>[On The Road]</span> Lab</h2>
-        <img src="assets/alchemy-logo.png" alt="Alchemy Code Lab Logo">
-        <div class="profile">
+        <h1>[code] On the Road</h1>
+        <div class="profile">        
             <span id="name"></span>
-            Madness Level: <span id="madness-level"></span>
-            Bank-Roll: $ <span id="bank-roll"></span>
+            hp:<span id="hp"></span>
+            gold: <span id="gold"></span>
         </div>
     </header>
     
     <main> 
         <h2 id="title"></h2>
-        <p><img id="image"><audio id="audio" autoplay></audio></p>
+        <p>
+            <img id="image">
+            <audio id="audio" autoplay></audio>
+        </p>
         <p id="description"></p>
         <form id="choice-form">
             <p id="choices"></p>
-            <button>Dig it</button>
+            <button>Choose</button>
         </form>
         <section id="result" class="hidden">
             <p id="result-description"></p>
-            <a href="../map">Back to the Road!</a>
+            <a href="../map">Back to Map</a>
         </section>
     </main>
 
     <footer>
         <cite>
-            ... maybe I'll cite something
+        
         </cite>
     </footer>
 
