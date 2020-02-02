@@ -1,0 +1,32 @@
+#quests {
+  position: relative;
+  background-image: url("https://cdn.shopify.com/s/files/1/0977/4104/products/USA-XX-675469.jpg?v=1536731377");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 90vw;
+  height: calc(90vw * 642 / 900);
+  margin: auto;
+}
+
+.quest {
+  position: absolute;
+  color: chartreuse;
+  font-weight: 700px;
+  font-size: 30px;
+  text-shadow: 4px 4px 4px rebeccapurple;
+}
+
+.quest.completed {
+  color: whitesmoke;
+  font-size: .9em;
+}
+
+.quest.completed:after {
+  content: ' ✔';
+}
+
+h2 {
+  text-align: center;
+  font-style: heavy;
+  font-size: 30px;
+ }

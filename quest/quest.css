@@ -1,0 +1,29 @@
+  
+main {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 75px;
+}
+
+.choice {
+  display: block;
+  list-style: none;
+  padding: 5px;
+}
+
+.choice input {
+  margin-right: 10px;
+}
+
+#result {
+  background: coral;
+  padding: 20px;
+}
+
+#result-description {
+  background: coral;
+  font-weight: bolder;
+  color: whitesmoke;
+  font-size: 18px;
+}

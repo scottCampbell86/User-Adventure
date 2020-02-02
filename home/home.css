@@ -1,0 +1,17 @@
+.text-prompt {
+  display: block;
+  margin: 10px 0;
+}
+
+.text-prompt label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+  font-weight: bolder;
+}
+
+.text-prompt input {
+  display: block;
+  padding: 5px;
+  font-size: 1.1em;
+}
