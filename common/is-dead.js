@@ -1,5 +1,5 @@
 function isDead(user) {
-  return user.hp <= 0;
+  return user.madness <= 0;
 }
 
 export default isDead;

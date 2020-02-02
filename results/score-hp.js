@@ -1,12 +1,12 @@
 
-function scoreHp(hp) {
-  if (hp <= 0) {
+function scoreMadness(madness) {
+  if (madness <= 0) {
       return 'dead';
   }
-  if (hp < 35) {
+  if (madness < 35) {
       return 'frail';
   }
   return 'healthy';
 }
 
-export default scoreHp;
+export default scoreMadness;

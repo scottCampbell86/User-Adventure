@@ -11,7 +11,7 @@ const user = getUser();
 
 const storyDisplay = document.getElementById('story-display');
 
-const hpResult = scoreHp(user.hp); // frail, dead, or healthy
+const madnessResult = scoreMadness(user.madness); // frail, dead, or healthy
 const goldResult = scoreGold(user.gold);
 const hpMessage = hpMessages[hpResult];
 
